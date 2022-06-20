@@ -2,4 +2,5 @@ Let's imagine you have to create a system for a pizza shop.
 
 Requirement:
 
-The pizza's can be of multiple types, let's assume Cheese Pizza, Mushroom Pizza and Tomato Pizza for now.
+1. The pizza's can be of multiple types, let's assume Cheese Pizza, Mushroom Pizza and Tomato Pizza for now.
+2. Every Pizza is having different toppings and it's cost.

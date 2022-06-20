@@ -1,4 +1,16 @@
 package com.designpatterns.decorator;
 
-public class MushroomPizza implements Pizza{
+import java.util.ArrayList;
+import java.util.List;
+
+public class MushroomPizza implements Pizza {
+    @Override
+    public List<String> getToppings() {
+        return new ArrayList<>(List.of("Mushrooms", "Cheese"));
+    }
+
+    @Override
+    public double getCost() {
+        return 180;
+    }
 }
