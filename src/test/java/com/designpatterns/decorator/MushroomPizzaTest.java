@@ -11,7 +11,7 @@ public class MushroomPizzaTest {
 
     @Test
     void getListOfMushroomPizzaToppings() {
-        List<String> expectedList = new ArrayList<>(List.of("Mushrooms", "Cheese"));
+        List<String> expectedList = new ArrayList<>(List.of("Mushrooms"));
         MushroomPizza mushroomPizza = new MushroomPizza();
 
         assertEquals(expectedList, mushroomPizza.getToppings());

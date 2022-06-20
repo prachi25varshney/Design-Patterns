@@ -6,7 +6,7 @@ import java.util.List;
 public class MushroomPizza implements Pizza {
     @Override
     public List<String> getToppings() {
-        return new ArrayList<>(List.of("Mushrooms", "Cheese"));
+        return new ArrayList<>(List.of("Mushrooms"));
     }
 
     @Override

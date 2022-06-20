@@ -12,7 +12,7 @@ public class TomatoPizzaTest {
 
     @Test
     void getListOfTomatoPizzaToppings() {
-        List<String> expectedList = new ArrayList<>(Arrays.asList("Mushrooms", "Cheese"));
+        List<String> expectedList = new ArrayList<>(Arrays.asList("Tomato", "Cheese"));
         TomatoPizza tomatoPizza = new TomatoPizza();
 
         assertEquals(expectedList, tomatoPizza.getToppings());

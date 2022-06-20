@@ -4,3 +4,4 @@ Requirement:
 
 1. The pizza's can be of multiple types, let's assume Cheese Pizza, Mushroom Pizza and Tomato Pizza for now.
 2. Every Pizza is having different toppings and it's cost.
+3. Let's assume that you can add extra add-ons like extra-cheese, paneer, olives, etc. on pizza and according to that you need to pay price.
