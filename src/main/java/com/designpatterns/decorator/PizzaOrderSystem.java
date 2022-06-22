@@ -4,17 +4,23 @@ import java.util.List;
 
 public class PizzaOrderSystem {
 
-    Pizza pizza;
+    PizzaType pizzaType;
+    List<PizzaAddOnType> pizzaAddOns;
 
-    public PizzaOrderSystem(Pizza pizza) {
-        this.pizza = pizza;
+    public PizzaOrderSystem(PizzaType pizzaType,List<PizzaAddOnType> pizzaAddOns) {
+        this.pizzaType = pizzaType;
+        this.pizzaAddOns = pizzaAddOns;
     }
 
     public double getCost(){
-        return this.pizza.getCost();
+        Pizza pizza = this.pizzaType.getPizza();
+        for(PizzaAddOnType pizzaAddOnType : pizzaAddOns){
+            pizza = PizzaAddOnFactory.getPizzaAddOns(pizzaAddOnType);
+        }
+        return pizza.getCost();
     }
 
     public List<String> getPizzaToppingList(){
-        return this.pizza.getToppings();
+        return this.pizzaType.getPizza().getToppings();
     }
 }

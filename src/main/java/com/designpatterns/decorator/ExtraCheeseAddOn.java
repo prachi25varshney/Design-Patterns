@@ -10,6 +10,10 @@ public class ExtraCheeseAddOn extends PizzaAddOn {
         this.pizza = pizza;
     }
 
+    public void setPizza(Pizza pizza) {
+        this.pizza = pizza;
+    }
+
     @Override
     public List<String> getToppings() {
         List<String> topping = this.pizza.getToppings();
@@ -20,5 +24,10 @@ public class ExtraCheeseAddOn extends PizzaAddOn {
     @Override
     public double getCost() {
         return this.pizza.getCost() + 100;
+    }
+
+    @Override
+    public PizzaAddOnType getType() {
+        return PizzaAddOnType.EXTRACHEESE;
     }
 }
