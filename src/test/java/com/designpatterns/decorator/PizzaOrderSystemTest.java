@@ -12,11 +12,9 @@ public class PizzaOrderSystemTest {
     @Test
     void shouldReturn410AfterAddingAllTheAddOnsInMushroomPizza() {
         double expPizzaCost = 410;
-        Pizza pizza = new MushroomPizza();
-        pizza = new ExtraCheeseAddOn(pizza);
-        pizza = new OlivesAddOn(pizza);
-        pizza = new PaneerAddOn(pizza);
-        PizzaOrderSystem orderPizza = new PizzaOrderSystem(pizza);
+        List<PizzaAddOnType> pizzaAddOns = new ArrayList<>(List.of(PizzaAddOnType.EXTRACHEESE, PizzaAddOnType.OLIVES,
+                PizzaAddOnType.PANEER));
+        PizzaOrderSystem orderPizza = new PizzaOrderSystem(PizzaType.MUSHROOM, pizzaAddOns);
 
         double actPizzaCost = orderPizza.getCost();
 
@@ -26,11 +24,9 @@ public class PizzaOrderSystemTest {
     @Test
     void shouldReturnToppingListWIthAllPaneerAndCheeseAndOlivesAddOnAfterAddingThemInMushroomPizza() {
         List<String> expPizzaToppings = new ArrayList<>(List.of("Mushrooms", "Extra-Cheese", "Olives", "Paneer"));
-        Pizza pizza = new MushroomPizza();
-        pizza = new ExtraCheeseAddOn(pizza);
-        pizza = new OlivesAddOn(pizza);
-        pizza = new PaneerAddOn(pizza);
-        PizzaOrderSystem orderPizza = new PizzaOrderSystem(pizza);
+        List<PizzaAddOnType> pizzaAddOns = new ArrayList<>(List.of(PizzaAddOnType.EXTRACHEESE, PizzaAddOnType.OLIVES,
+                PizzaAddOnType.PANEER));
+        PizzaOrderSystem orderPizza = new PizzaOrderSystem(PizzaType.MUSHROOM, pizzaAddOns);
 
         List<String> actPizzaToppings = orderPizza.getPizzaToppingList();
 
