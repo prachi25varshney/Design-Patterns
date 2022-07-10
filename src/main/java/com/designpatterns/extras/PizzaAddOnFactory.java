@@ -1,4 +1,8 @@
-package com.designpatterns.decorator;
+package com.designpatterns.extras;
+
+import com.designpatterns.decorator.Pizza;
+import com.designpatterns.decorator.PizzaAddOn;
+import com.designpatterns.decorator.PizzaAddOnType;
 
 import java.util.HashMap;
 import java.util.List;
